@@ -29,7 +29,7 @@ const generarGrillaAlAzar = (filas, columnas, array) => {
 
 //<div class="icono"></div>;
 
-let matriz = generarGrillaAlAzar(9, 9, arrayEmojis);
+let matriz = generarGrillaAlAzar(8, 8, arrayEmojis);
 
 const convertirAString = (matriz) => {
   let resultado = [];
