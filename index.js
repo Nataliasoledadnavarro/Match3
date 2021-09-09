@@ -25,12 +25,21 @@ const generarGrillaAlAzar = (filas, columnas, array) => {
   return matriz;
 };
 
-console.log(generarGrillaAlAzar(10, 10, arrayEmojis));
-
 // GRILLA EN HTML //
 
-<div class="icono"></div>;
+//<div class="icono"></div>;
 
-const convertirAString = (arrayEmojis) => {
+let matriz = generarGrillaAlAzar(9, 9, arrayEmojis);
+
+const convertirAString = (matriz) => {
   let resultado = [];
+
+  for (let i = 0; i < matriz.length; i++) {
+    for (let j = 0; j < matriz[i].length; j++) {
+      resultado.push(`<div class="icono">${matriz[i][j]}</div>`);
+    }
+  }
+  return resultado.join("");
 };
+
+grilla.innerHTML = convertirAString(matriz);
