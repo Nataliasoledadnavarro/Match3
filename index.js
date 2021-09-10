@@ -1,5 +1,7 @@
 //ELEMENTOS DEL DOM //
 const grilla = document.querySelector(".grilla");
+const modalInstrucciones = document.getElementById("modal-instrucciones");
+const botonJugar = document.getElementById("boton-jugar");
 
 // FUNCIONES AUXILIARES //
 
@@ -41,5 +43,11 @@ const convertirAString = (matriz) => {
 };
 
 grilla.innerHTML = convertirAString(matriz);
+
+//MODAL INSTRUCCIONES //
+
+botonJugar.onclick = () => {
+  modalInstrucciones.style.display = "none";
+};
 
 // MODAL DIFICULTADES //
