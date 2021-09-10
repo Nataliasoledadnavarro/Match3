@@ -1,7 +1,11 @@
 //ELEMENTOS DEL DOM //
 const grilla = document.querySelector(".grilla");
 const modalInstrucciones = document.getElementById("modal-instrucciones");
+const modalDifidultades = document.getElementById("modal-dificultad");
 const botonJugar = document.getElementById("boton-jugar");
+const botonFacil = document.getElementById("facil");
+const botonIntermedio = document.getElementById("intermedio");
+const botonDificil = document.getElementById("dificil");
 
 // FUNCIONES AUXILIARES //
 
@@ -27,9 +31,7 @@ const generarGrillaAlAzar = (filas, columnas, array) => {
   return matriz;
 };
 
-// GRILLA EN HTML //
-
-let matriz = generarGrillaAlAzar(8, 8, arrayEmojis);
+// CONVERTIR A STRING Y ENVIAR A HTML //
 
 const convertirAString = (matriz) => {
   let resultado = [];
@@ -42,8 +44,6 @@ const convertirAString = (matriz) => {
   return resultado.join("");
 };
 
-grilla.innerHTML = convertirAString(matriz);
-
 //MODAL INSTRUCCIONES //
 
 botonJugar.onclick = () => {
@@ -51,3 +51,37 @@ botonJugar.onclick = () => {
 };
 
 // MODAL DIFICULTADES //
+
+botonFacil.onclick = () => {
+  let matriz = generarGrillaAlAzar(9, 9, arrayEmojis);
+  grilla.innerHTML = convertirAString(matriz);
+
+  const iconos = document.querySelectorAll(".icono");
+
+  for (let i = 0; i < iconos.length; i++) {
+    iconos[i].style.width = "46px";
+    iconos[i].style.height = "46px";
+    iconos[i].style.fontSize = "30px";
+  }
+  modalDifidultades.style.display = "none";
+};
+
+botonIntermedio.onclick = () => {
+  let matriz = generarGrillaAlAzar(8, 8, arrayEmojis);
+  grilla.innerHTML = convertirAString(matriz);
+  modalDifidultades.style.display = "none";
+};
+
+botonDificil.onclick = () => {
+  let matriz = generarGrillaAlAzar(7, 7, arrayEmojis);
+  grilla.innerHTML = convertirAString(matriz);
+
+  const iconos = document.querySelectorAll(".icono");
+
+  for (let i = 0; i < iconos.length; i++) {
+    iconos[i].style.width = "60px";
+    iconos[i].style.height = "60px";
+    iconos[i].style.fontSize = "38px";
+  }
+  modalDifidultades.style.display = "none";
+};
