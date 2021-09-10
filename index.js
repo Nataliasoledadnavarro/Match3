@@ -27,8 +27,6 @@ const generarGrillaAlAzar = (filas, columnas, array) => {
 
 // GRILLA EN HTML //
 
-//<div class="icono"></div>;
-
 let matriz = generarGrillaAlAzar(8, 8, arrayEmojis);
 
 const convertirAString = (matriz) => {
@@ -43,3 +41,5 @@ const convertirAString = (matriz) => {
 };
 
 grilla.innerHTML = convertirAString(matriz);
+
+// MODAL DIFICULTADES //

@@ -23,6 +23,86 @@ main {
   flex-direction: column;
 }
 
+#modal-instrucciones {
+  position: absolute;
+  top: 210px;
+  z-index: 1;
+  width: 410px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#modal-instrucciones p {
+  font-size: 12px;
+  text-align: center;
+  padding: 0px;
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+h2,
+h4 {
+  margin: 5px;
+}
+h4 {
+  margin-top: 20px;
+}
+
+.contenedor-boton-jugar {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+#boton-jugar {
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background-color: red;
+  padding: 5px 15px 5px 15px;
+}
+
+#modal-dificultad {
+  position: absolute;
+  top: 230px;
+  width: 410px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.botones {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 22px;
+}
+
+.botones button {
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background-color: red;
+  padding: 5px 10px 5px 10px;
+}
+
 .grilla {
   width: 420px;
   height: 420px;
@@ -47,5 +127,3 @@ main {
   font-size: 35px;
   text-shadow: 1px 1px 1px white;
 }
-
-

@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+
     <title>MatcheAdas</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <main>
-       
-        <h1>MatcheAdas</h1>
-        <div class="grilla">
-        </div>
+      <div id="modal-instrucciones">
+        <h2>¡Bienvenida!</h2>
+        <p>
+          En matcheADAs tu objetivo es juntar tres o más ítems del mismo tipo,
+          ya sea en fila o columna. Para eso, seleccioná un ítem y a
+          continuación un ítem adyacente para intercambiarlos de lugar.
+        </p>
+        <p>
+          Si se forma un grupo, esos ítems se eliminarán y ganarás puntos.
+          ¡Sigue armando grupos de 3 o más antes de que se acabe el tiempo!
+        </p>
+        <h4>Controles</h4>
+        <p>Click izquierdo: selección</p>
+        <p>Enter o Espacio: selección</p>
+        <p>Flechas o WASD: movimiento e intercambio</p>
+        <div class="contenedor-boton-jugar"><button id="boton-jugar">A jugar</button></div>
+    </div>
 
+      <div id="modal-dificultad">
+        <h3>Nuevo juego</h3>
+        <p>Seleccioná una dificultad</p>
+        <div class="botones">
+          <button id="facil">Fácil</button>
+          <button id="fntermedio">Intermedia</button>
+          <button id="dificil">Difícil</button>
+        </div>
+      </div>
+
+      <h1>MatcheAdas</h1>
+      <div class="grilla"></div>
     </main>
 
-
-    
-
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
