@@ -88,13 +88,13 @@ botonDificil.onclick = () => {
   for (let i = 0; i < matriz.length; i++) {
     for (let j = 0; j < matriz[i].length; j++) {
         if (matriz[i][j] === matriz[i][j + 1] && matriz[i][j] === matriz[i][j + 2]) {
-          alert("hola")
+          alert("Hay match horizontal!")
         /*matriz[i][j].style.backgroundColor = "yellow"
          matriz[i][j+1].style.backgroundColor = "yellow"
          matriz[i][j+2].style.backgroundColor = "yellow"*/
     }
     if (matriz[i+1] && matriz[i+2] && matriz[i][j] === matriz[i+1][j] && matriz[i][j] === matriz[i+2][j]){
-      alert("chau")  
+      alert("Hay match vertical!")  
       /*matriz[i][j].style.backgroundColor = "yellow"
       matriz[i+1][j].style.backgroundColor = "yellow"
       matriz[i+2][j].style.backgroundColor = "yellow"*/
