@@ -84,4 +84,22 @@ botonDificil.onclick = () => {
     iconos[i].style.fontSize = "38px";
   }
   modalDifidultades.style.display = "none";
-};
+
+  for (let i = 0; i < matriz.length; i++) {
+    for (let j = 0; j < matriz[i].length; j++) {
+        if (matriz[i][j] === matriz[i][j + 1] && matriz[i][j] === matriz[i][j + 2]) {
+          alert("hola")
+        /*matriz[i][j].style.backgroundColor = "yellow"
+         matriz[i][j+1].style.backgroundColor = "yellow"
+         matriz[i][j+2].style.backgroundColor = "yellow"*/
+    }
+    if (matriz[i+1] && matriz[i+2] && matriz[i][j] === matriz[i+1][j] && matriz[i][j] === matriz[i+2][j]){
+      alert("chau")  
+      /*matriz[i][j].style.backgroundColor = "yellow"
+      matriz[i+1][j].style.backgroundColor = "yellow"
+      matriz[i+2][j].style.backgroundColor = "yellow"*/
+  }
+    
+  }
+}
+}
