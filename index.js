@@ -38,7 +38,9 @@ const convertirAString = (matriz) => {
 
   for (let i = 0; i < matriz.length; i++) {
     for (let j = 0; j < matriz[i].length; j++) {
-      resultado.push(`<div class="icono">${matriz[i][j]}</div>`);
+      resultado.push(
+        `<div class="icono" div ="${i}-${j}">${matriz[i][j]}</div>`
+      );
     }
   }
   return resultado.join("");
@@ -87,19 +89,29 @@ botonDificil.onclick = () => {
 
   for (let i = 0; i < matriz.length; i++) {
     for (let j = 0; j < matriz[i].length; j++) {
-        if (matriz[i][j] === matriz[i][j + 1] && matriz[i][j] === matriz[i][j + 2]) {
-          alert("Hay match horizontal!")
+      if (
+        matriz[i][j] === matriz[i][j + 1] &&
+        matriz[i][j] === matriz[i][j + 2]
+      ) {
+        alert("Hay match horizontal!");
+        const div = document.getElementById(`${i}-${[j]}`);
+        console.log(div); //null
+
+        /*div.style.backgroundColor = "yellow"
+       div.style.backgroundColor = "yellow"
+       div.style.backgroundColor = "yellow"*/
+      }
+      if (
+        matriz[i + 1] &&
+        matriz[i + 2] &&
+        matriz[i][j] === matriz[i + 1][j] &&
+        matriz[i][j] === matriz[i + 2][j]
+      ) {
+        alert("Hay match vertical!");
         /*matriz[i][j].style.backgroundColor = "yellow"
-         matriz[i][j+1].style.backgroundColor = "yellow"
-         matriz[i][j+2].style.backgroundColor = "yellow"*/
-    }
-    if (matriz[i+1] && matriz[i+2] && matriz[i][j] === matriz[i+1][j] && matriz[i][j] === matriz[i+2][j]){
-      alert("Hay match vertical!")  
-      /*matriz[i][j].style.backgroundColor = "yellow"
       matriz[i+1][j].style.backgroundColor = "yellow"
       matriz[i+2][j].style.backgroundColor = "yellow"*/
+      }
+    }
   }
-    
-  }
-}
-}
+};
